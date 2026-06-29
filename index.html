@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="摄影师个人作品集，展示摄影作品、展览信息与当日行程安排。"
+    />
+    <title>Photographer Portfolio</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#hero" aria-label="返回首页">
+        <span class="brand-mark"></span>
+        <span>YOUR NAME</span>
+      </a>
+
+      <nav class="nav" aria-label="主导航">
+        <a href="#works">作品</a>
+        <a href="#schedule">行程</a>
+        <a href="#contact">联系</a>
+      </nav>
+
+      <a class="contact-button" href="mailto:hello@example.com">联系我</a>
+    </header>
+
+    <main>
+      <section class="hero" id="hero" aria-label="首页">
+        <img
+          class="hero-image"
+          src="assets/images/hero.webp"
+          alt="暗色摄影风格背景"
+        />
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+          <p class="eyebrow">Photographer / Visual Storyteller</p>
+          <h1>在克制的光线里，记录真实的秩序。</h1>
+          <p class="hero-copy">
+            个人摄影作品集。关注城市空间、人的轨迹与展览现场中短暂出现的结构感。
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="#works">查看作品</a>
+            <a class="secondary-link" href="#schedule">近期行程</a>
+          </div>
+        </div>
+
+        <div class="hero-meta" aria-label="当前展览摘要">
+          <span>Next Exhibition</span>
+          <strong>2026.07 / Hong Kong</strong>
+        </div>
+      </section>
+
+      <section class="section works-section" id="works">
+        <div class="section-heading">
+          <p class="eyebrow">Selected Works</p>
+          <h2>照片展示</h2>
+          <p>
+            这里先放置基础占位作品。后续可以按系列、年份、城市或展览项目继续扩展。
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="work-item work-item-large">
+            <img src="assets/images/work-street.webp" alt="雨夜城市街头摄影作品" />
+            <div class="work-caption">
+              <span>Series 01</span>
+              <h3>Rain Trace</h3>
+              <p>Urban night / 2026</p>
+            </div>
+          </article>
+
+          <article class="work-item">
+            <img src="assets/images/work-architecture.webp" alt="暗色建筑空间摄影作品" />
+            <div class="work-caption">
+              <span>Series 02</span>
+              <h3>Concrete Index</h3>
+              <p>Architecture / 2026</p>
+            </div>
+          </article>
+
+          <article class="work-item">
+            <img src="assets/images/work-gallery.webp" alt="展览空间摄影作品" />
+            <div class="work-caption">
+              <span>Series 03</span>
+              <h3>After Viewing</h3>
+              <p>Gallery / 2026</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section schedule-section" id="schedule">
+        <div class="section-heading">
+          <p class="eyebrow">Upcoming</p>
+          <h2>行程安排</h2>
+          <p>用于展示接下来会参加的展览，以及展览当天的时间表。</p>
+        </div>
+
+        <div class="schedule-layout">
+          <aside class="event-summary">
+            <span class="event-date">Jul 18</span>
+            <h3>个人摄影项目展</h3>
+            <p>Hong Kong / 展览空间名称待补充</p>
+            <a href="mailto:hello@example.com">预约交流</a>
+          </aside>
+
+          <div class="timeline" aria-label="当天行程">
+            <article class="timeline-item">
+              <time datetime="2026-07-18T10:00">10:00</time>
+              <div>
+                <h3>布展检查</h3>
+                <p>确认作品顺序、灯光、标题牌和现场动线。</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <time datetime="2026-07-18T14:00">14:00</time>
+              <div>
+                <h3>展览开放</h3>
+                <p>面向访客开放，可在现场进行自由观看。</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <time datetime="2026-07-18T16:30">16:30</time>
+              <div>
+                <h3>作品导览</h3>
+                <p>围绕拍摄动机、选片逻辑和输出材料进行简短分享。</p>
+              </div>
+            </article>
+
+            <article class="timeline-item">
+              <time datetime="2026-07-18T18:00">18:00</time>
+              <div>
+                <h3>现场交流</h3>
+                <p>与观众、策展方和摄影同行进行开放交流。</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <p>YOUR NAME / Photographer</p>
+      <a href="mailto:hello@example.com">hello@example.com</a>
+    </footer>
+
+    <script src="assets/main.js"></script>
+  </body>
+</html>
