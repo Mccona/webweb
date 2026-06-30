@@ -2,15 +2,17 @@
 
 ## Purpose
 
-This repository contains the first version of a personal photography portfolio website. The site is meant to present:
+This repository contains a personal photography portfolio website for Mccona, a cosplay/anime convention field photographer. The site is meant to present:
 
 - Photographer identity
-- Selected photography works
-- Upcoming exhibition information
-- Same-day event schedule
+- Selected cosplay convention photos
+- Pricing
+- Before-shoot notes
+- Upcoming convention attendance
+- Available booking slots during conventions
 - Contact entry point
 
-The current visual direction is dark, restrained, premium, and slightly technological, without using a generic template-site look.
+The current visual direction is dark, restrained, premium, and slightly technological, without using a generic template-site look. Mobile access is the priority.
 
 ## Current Implementation
 
@@ -35,8 +37,12 @@ The page currently includes:
 - Full-screen hero section
 - Fixed navigation
 - Contact button
-- Photo grid
-- Schedule/timeline section
+- Thumbnail-based photo grid
+- Lightbox preview with original-image link
+- Pricing section
+- Before-shoot notes
+- Convention schedule cards
+- Expandable booking slots
 - Footer contact link
 
 ## Local Development
@@ -96,27 +102,37 @@ After HTTP works, configure Let's Encrypt SSL in BaoTa and enable forced HTTPS.
 
 Current images are generated placeholders. Replace them with real photography works when available:
 
-- `assets/images/hero.webp`
-- `assets/images/work-street.webp`
-- `assets/images/work-architecture.webp`
-- `assets/images/work-gallery.webp`
+- `assets/images/cosplay-hero.webp`
+- `assets/images/cosplay-portrait.webp`
+- `assets/images/cosplay-hall.webp`
+- `assets/images/cosplay-detail.webp`
 
-The `.png` versions are retained as source/reference copies. The site currently references `.webp` files for lighter loading.
+The `.png` versions are retained as temporary original-image targets. The site references `.webp` files for faster thumbnail and hero loading.
 
 Text placeholders to update:
 
-- `YOUR NAME`
-- `hello@example.com`
-- Hero headline and description
-- Exhibition date and city
-- Schedule items
-- Work titles and captions
+- QQ contact link if the number changes
+- WeChat contact if the ID changes
+- Convention names, dates, cities, and venues
+- Booking slots and slot status
+
+Current contact text:
+
+- QQ: `453194285`
+- WeChat: `Mccoonnaa`
+
+Current convention schedule:
+
+- `2026.07.25` 常熟 CDW, slots from `11:00 - 17:00` by hour
+- `2026.07.26` 常熟 CDW, slots from `11:00 - 17:00` by hour
 
 ## Design Rules For Future Iterations
 
 - Keep the site dark, restrained, and image-led.
 - Avoid generic template sections and decorative filler.
 - Use real photography as the main visual material.
+- Keep mobile browsing dense and fast because most visitors will open it on phones.
+- Avoid putting captions under every photo; the current direction is visual-first thumbnails.
 - Keep pages fast: prefer WebP/AVIF and avoid uploading full camera originals.
 - Keep the first version static unless content management becomes painful.
 - If a framework is introduced later, document the reason and update this file.
@@ -131,4 +147,3 @@ Do not commit:
 - Domain registrar passwords
 - API keys
 - Private contact details unless intended to be public on the website
-
