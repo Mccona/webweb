@@ -23,3 +23,7 @@ build/
 
 # Local Git metadata workaround for this sandboxed workspace
 .repo-git/
+
+# Local/private original photography files. Generated web assets live in assets/.
+IMAGE/
+originals/

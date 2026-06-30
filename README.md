@@ -37,6 +37,7 @@ Upload these items to the BaoTa website root:
 ```text
 index.html
 assets/
+originals/    # deploy only when original-image links should work
 ```
 
 Expected server path:
@@ -52,5 +53,7 @@ The deployed structure should be:
 /www/wwwroot/www.mccona.com/assets/styles.css
 /www/wwwroot/www.mccona.com/assets/main.js
 /www/wwwroot/www.mccona.com/assets/images/
+/www/wwwroot/www.mccona.com/originals/
 ```
 
+`IMAGE/` is the local source-photo folder and is ignored by Git. `originals/` is also ignored by Git and is only meant to be uploaded to the server when original-photo downloads/previews are needed.

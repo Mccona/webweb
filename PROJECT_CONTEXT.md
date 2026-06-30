@@ -37,12 +37,13 @@ The page currently includes:
 - Full-screen hero section
 - Fixed navigation
 - Contact button
-- Thumbnail-based photo grid
+- Thumbnail-based masonry photo grid generated from local originals
 - Lightbox preview with original-image link
 - Pricing section
 - Before-shoot notes
 - Convention schedule cards
 - Expandable booking slots
+- Contact section with avatar, QQ QR code, and WeChat QR code
 - Footer contact link
 
 ## Local Development
@@ -102,12 +103,13 @@ After HTTP works, configure Let's Encrypt SSL in BaoTa and enable forced HTTPS.
 
 Current images are generated placeholders. Replace them with real photography works when available:
 
-- `assets/images/cosplay-hero.webp`
-- `assets/images/cosplay-portrait.webp`
-- `assets/images/cosplay-hall.webp`
-- `assets/images/cosplay-detail.webp`
+- Hero: `assets/images/cosplay-hero.webp`
+- Committed gallery previews: `assets/images/gallery/shot-*.webp`
+- Committed lightbox previews: `assets/images/gallery/shot-*-full.webp`
+- Local/private originals: `IMAGE/`
+- Deploy-only original links: `originals/`
 
-The `.png` versions are retained as temporary original-image targets. The site references `.webp` files for faster thumbnail and hero loading.
+`IMAGE/` and `originals/` are intentionally ignored by Git because the original photos are large. If originals need to be available online, deploy `originals/` to the server alongside `index.html` and `assets/`.
 
 Text placeholders to update:
 
