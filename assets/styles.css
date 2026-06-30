@@ -461,27 +461,32 @@ img {
   gap: 12px;
 }
 
-.qr-grid figure {
-  display: grid;
-  gap: 8px;
-  margin: 0;
-  padding: 10px;
+.qr-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 86px;
+  padding: 14px;
   border: 1px solid var(--line);
   border-radius: 6px;
   background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    color 160ms ease;
 }
 
-.qr-grid img {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 4px;
-  background: #fff;
+.qr-trigger:hover,
+.qr-trigger:focus-visible {
+  border-color: rgba(123, 216, 221, 0.48);
+  background: rgba(123, 216, 221, 0.08);
+  color: var(--text);
 }
 
-.qr-grid figcaption {
+.qr-trigger span {
   color: var(--muted);
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 700;
   text-align: center;
 }
@@ -680,6 +685,10 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: var(--text);
   color: #08090b;
+}
+
+.original-link[hidden] {
+  display: none;
 }
 
 @media (max-width: 860px) {

@@ -24,6 +24,21 @@ document.querySelectorAll(".work-thumb").forEach((button) => {
 
     lightboxImage.src = button.dataset.full;
     originalLink.href = button.dataset.original;
+    originalLink.hidden = false;
+    if (!lightbox.open) lightbox.showModal();
+    document.body.classList.add("lightbox-open");
+  });
+});
+
+document.querySelectorAll(".qr-trigger").forEach((button) => {
+  button.addEventListener("click", () => {
+    if (!lightbox || !lightbox.showModal) {
+      window.open(button.dataset.qr, "_blank", "noopener");
+      return;
+    }
+
+    lightboxImage.src = button.dataset.qr;
+    originalLink.hidden = true;
     if (!lightbox.open) lightbox.showModal();
     document.body.classList.add("lightbox-open");
   });

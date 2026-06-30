@@ -8,7 +8,7 @@
       content="二次元漫展场照摄影师个人作品集，展示场照作品、漫展行程与可预约拍摄时间。"
     />
     <title>Mccona / Cosplay Event Photographer</title>
-    <link rel="stylesheet" href="assets/styles.css?v=20260630-2" />
+    <link rel="stylesheet" href="assets/styles.css?v=20260630-3" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -57,10 +57,8 @@
       <section class="section works-section" id="works">
         <div class="section-heading">
           <p class="eyebrow">Selected Shots</p>
-          <h2>场照缩略图</h2>
-          <p>
-            作品区会承载较多照片，默认以缩略图快速浏览。点开缩略图后可查看大图，并保留进入原图文件的入口。
-          </p>
+          <h2>例图展示</h2>
+          <p>作品默认宣传，介意请告知。</p>
         </div>
 
         <div class="work-grid" aria-label="场照作品缩略图">
@@ -99,15 +97,6 @@
             aria-label="查看场照大图 04"
           >
             <img src="assets/images/gallery/shot-004.webp" alt="Mccona 场照作品 04" loading="lazy" />
-          </button>
-          <button
-            class="work-thumb"
-            type="button"
-            data-full="assets/images/gallery/shot-005-full.webp"
-            data-original="originals/shot-005.jpg"
-            aria-label="查看场照大图 05"
-          >
-            <img src="assets/images/gallery/shot-005.webp" alt="Mccona 场照作品 05" loading="lazy" />
           </button>
           <button
             class="work-thumb work-thumb-wide"
@@ -323,7 +312,6 @@
         <div class="section-heading">
           <p class="eyebrow">Pricing</p>
           <h2>价格</h2>
-          <p>价格先按当前约拍习惯展示，后续可以按展会、套餐和返图周期继续细化。</p>
         </div>
 
         <div class="pricing-grid">
@@ -362,9 +350,6 @@
         <div class="section-heading">
           <p class="eyebrow">Booking Slots</p>
           <h2>漫展档期</h2>
-          <p>
-            这里展示我会去的漫展，以及当天哪些时间段可以约拍。时间表后续可以按预约情况实时更新。
-          </p>
         </div>
 
         <div class="schedule-list" aria-label="漫展可预约时间">
@@ -453,19 +438,17 @@
         <div class="contact-panel">
           <img class="avatar" src="assets/images/contact/avatar.jpg" alt="Mccona 头像" loading="lazy" />
           <div class="contact-copy">
-            <p class="eyebrow">Contact</p>
-            <h2>约拍联系</h2>
+            <p class="eyebrow">Booking Contact</p>
+            <h2>预约联系</h2>
             <p>QQ 453194285 / Wechat Mccoonnaa</p>
           </div>
           <div class="qr-grid" aria-label="联系方式二维码">
-            <figure>
-              <img src="assets/images/contact/qq-qr.png" alt="QQ 二维码" loading="lazy" />
-              <figcaption>QQ</figcaption>
-            </figure>
-            <figure>
-              <img src="assets/images/contact/wechat-qr.png" alt="微信二维码" loading="lazy" />
-              <figcaption>Wechat</figcaption>
-            </figure>
+            <button class="qr-trigger" type="button" data-qr="assets/images/contact/qq-qr.png" aria-label="查看 QQ 二维码">
+              <span>QQ</span>
+            </button>
+            <button class="qr-trigger" type="button" data-qr="assets/images/contact/wechat-qr.png" aria-label="查看微信二维码">
+              <span>Wechat</span>
+            </button>
           </div>
         </div>
       </section>
@@ -482,6 +465,6 @@
       <a class="original-link" data-original-link href="#" target="_blank" rel="noreferrer">查看原图</a>
     </dialog>
 
-    <script src="assets/main.js?v=20260630-2"></script>
+    <script src="assets/main.js?v=20260630-3"></script>
   </body>
 </html>
