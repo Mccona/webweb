@@ -8,6 +8,44 @@ const updateHeader = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 24);
 };
 
+const revealTargets = [
+  ...document.querySelectorAll(
+    ".section-heading, .work-thumb, .price-card, .notice-list, .event-card, .contact-panel"
+  ),
+];
+
+const setupReveals = () => {
+  revealTargets.forEach((element, index) => {
+    element.classList.add("reveal");
+
+    if (element.classList.contains("work-thumb")) {
+      element.style.transitionDelay = `${Math.min(index % 8, 7) * 35}ms`;
+    }
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    revealTargets.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    {
+      rootMargin: "0px 0px -8% 0px",
+      threshold: 0.08,
+    }
+  );
+
+  revealTargets.forEach((element) => observer.observe(element));
+};
+
 const closeLightbox = () => {
   if (!lightbox || !lightbox.open) return;
 
@@ -71,4 +109,6 @@ window.addEventListener("keydown", (event) => {
 });
 
 updateHeader();
+setupReveals();
+requestAnimationFrame(() => document.body.classList.add("is-ready"));
 window.addEventListener("scroll", updateHeader, { passive: true });
