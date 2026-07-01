@@ -704,6 +704,27 @@ img {
   width: 100%;
   height: 100%;
   object-fit: contain;
+  opacity: 1;
+  transition: opacity 160ms ease;
+}
+
+.lightbox.is-loading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  margin: -17px 0 0 -17px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-top-color: var(--cyan);
+  border-radius: 50%;
+  animation: spin 720ms linear infinite;
+}
+
+.lightbox.is-loading img {
+  opacity: 0;
 }
 
 .lightbox-close {
@@ -810,6 +831,12 @@ img {
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 

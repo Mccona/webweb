@@ -105,13 +105,14 @@ Motion effects are intentionally subtle:
 - Sections/cards/photos reveal as they enter viewport.
 - Gallery hover slightly lifts/highlights images.
 - Lightbox has a short entrance animation.
+- Lightbox clears the previous image, shows a loading state, and only swaps to the next image after it has loaded. This avoids briefly showing a QR code when opening a gallery photo, or vice versa.
 - `prefers-reduced-motion: reduce` is respected.
 
 Cache-busting query strings are used for CSS/JS. Current version:
 
 ```text
-assets/styles.css?v=20260630-5
-assets/main.js?v=20260630-5
+assets/styles.css?v=20260701-1
+assets/main.js?v=20260701-1
 ```
 
 When changing CSS/JS for production, bump these query strings.
@@ -177,6 +178,7 @@ Rules:
 - `originals/shot-*.jpg` must be deployed to the server if the "查看原图" links should work.
 - Do not commit full-size originals to GitHub.
 - Do not use Git LFS for this site unless the deployment workflow is redesigned. Current workflow keeps GitHub light and uploads originals directly to the server.
+- Old root-level placeholder images under `assets/images/` were removed from Git. Keep only the current hero, contact assets, and gallery WebP outputs committed.
 
 ### Current Local Source Images
 
